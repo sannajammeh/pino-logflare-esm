@@ -1,6 +1,6 @@
 {
   "name": "pino-logflare-esm",
-  "version": "0.1.0",
+  "version": "0.1.0-rc.1",
   "description": "A transport for Pino that sends messages to Logflare",
   "homepage": "https://github.com/logflare/pino-logflare",
   "main": "dist/index.js",
