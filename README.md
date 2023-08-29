@@ -1,5 +1,7 @@
 # pino-logflare
 
+> NOTE: This is the ESM version of Pino logflare, I try to keep it up to date with the original version, but if you want to use the original version, please use the [original version](https://github.com/Logflare/pino-logflare)
+
 This module provides transport for [pino][pino] that forwards messages to your [Logflare][logflare] account.
 
 You can use `pino-logflare` both for node and browser apps. We also support isomorphic Vercel apps.

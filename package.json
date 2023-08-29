@@ -1,11 +1,25 @@
 {
-  "name": "pino-logflare",
-  "version": "0.4.0",
+  "name": "pino-logflare-esm",
+  "version": "0.1.0",
   "description": "A transport for Pino that sends messages to Logflare",
   "homepage": "https://github.com/logflare/pino-logflare",
   "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    },
+    "./browser": {
+      "types": "./dist/browser/index.d.ts",
+      "import": "./dist/browser/index.esm.js",
+      "require": "./dist/browser/index.js"
+    }
+  },
   "scripts": {
-    "build": "tsc",
+    "build": "bunchee",
     "dev:cli": "node ./test/debug.js | node ./src/cli.js",
     "test": "jest",
     "test.watch": "jest --watch",
@@ -46,6 +60,7 @@
     "@types/through2": "^2.0.36",
     "@typescript-eslint/eslint-plugin": "^4.16.0",
     "@typescript-eslint/parser": "^4.16.0",
+    "bunchee": "^3.6.1",
     "eslint": "^7.3.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-standard": "^16.0.0",
